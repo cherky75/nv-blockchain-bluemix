@@ -1,0 +1,107 @@
+#dashboardPanel(hidden).panel
+	br
+	br
+	br
+	br
+	table#AcctTab
+		thead
+			tr
+				th
+					h2 Vostro Accounts
+				th
+					h2 Nostro Accounts
+		tbody
+			tr#acctRow1
+				td
+					div#vAccount1(style="margin: auto;padding: 5px")
+						span(style="font-weight:normal;") 
+							span#v1Holder BANKX
+							span  Account 
+							span(style="font-weight:normal;font-size:12px") (held by 
+								span#v1Owner BANKX
+								span )
+						br
+						br
+						span(style="font-weight:bold;font-size: 40px")#v1Balance 0
+						br
+						span(style="font-weight:bold;")#v1Currency N/A
+				td
+					div#nAccount1(style="margin: auto;padding: 5px")
+						span(style="font-weight:normal;") 
+							span#n1Holder BANKX
+							span  Account 
+							span(style="font-weight:normal;font-size:12px") (held by 
+								span#n1Owner BANKX
+								span )
+						br
+						br
+						span(style="font-weight:bold;font-size: 40px")#n1Balance 0
+						br
+						span(style="font-weight:bold;")#n1Currency N/A
+			tr#acctRow2
+				td
+					div#vAccount2(style="margin: auto;padding: 5px")
+						span(style="font-weight:normal;") 
+							span#v2Holder BANKX
+							span  Account 
+							span(style="font-weight:normal;font-size:12px") (held by 
+								span#v2Owner BANKX
+								span )
+						br
+						br
+						span(style="font-weight:bold;font-size: 40px")#v2Balance 0
+						br
+						span(style="font-weight:bold;")#v2Currency N/A
+				td
+					div#nAccount2(style="margin: auto;padding: 5px")
+						span(style="font-weight:normal;") 
+							span#n2Holder BANKX
+							span  Account 
+							span(style="font-weight:normal;font-size:12px") (held by 
+								span#n2Owner BANKX
+								span )
+						br
+						br
+						span(style="font-weight:bold;font-size: 40px")#n2Balance 0
+						br
+						span(style="font-weight:bold;")#n2Currency N/A
+	
+
+	br
+	#dashboardModal.modalDialog(style="margin-top: 200px")
+			div
+				.modal-header
+					h2 Filter Transactions
+					hr
+				.modal-content
+					form#dashboardFilter
+						input#dashboard_receiver.dashboard-filter(type="text" name="receiver" placeholder="Receiver")
+						br
+						input#dashboard_ordCust.dashboard-filter(type="text" name="ordCust" placeholder="Ordering Customer")
+						br
+						input#dashboard_benefCust.dashboard-filter(type="text" name="benefCust" placeholder="Beneficiary Customer" style="margin-bottom:10px")
+						br
+						a.filter-button(href="#close" title="Close" ) Close
+						
+	#openTrades
+		
+		br
+		a.filter-button(href="#dashboardModal") Filter Transactions
+		br
+		br
+		table#dashboardTable.tablesorter
+			thead
+				tr 
+					th
+					th TX REF#
+					th OP CODE
+					th DATE
+					th CURRENCY
+					th AMOUNT
+					th SENDER
+					th RECEIVER
+					th ORD CUST
+					th BENEF CUST
+					th DET CHARGES
+					th STATUS
+			tbody#dashboardBody

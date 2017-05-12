@@ -1,0 +1,39 @@
+#transactionPanel(hidden).panel
+	h1 Submit MT103
+	hr
+
+	#innerWrap
+		span.fa.fa-envelope-square(style="font-size: 300px; float:left;margin-right: 60px; padding-bottom:100px")
+		
+		form(action="/transaction" method="POST")#transactionform
+			legend 
+				input(type="text" name="RefNumber" placeholder="Tx Ref Number" disabled)
+			legend 
+				input(type="text" name="OpCode" placeholder="Operation Code" disabled)
+			legend 
+				input(type="text" name="Date" placeholder="Date" disabled)
+			legend 
+				input(type="text" name="Currency" placeholder="Currency" disabled)
+			legend 
+				input(type="number" name="Amount" placeholder="Amount")
+			legend 
+				input(type="text" name="Sender" placeholder="Sender" disabled)
+			legend 
+				input(type="text" name="Receiver" placeholder="Receiver" disabled)
+			legend 
+				input(type="text" name="OrdCust" placeholder="Ordering Customer")
+			legend 
+				input(type="text" name="BenefCust" placeholder="Beneficiary Customer")
+			legend 
+				input(type="text" name="DetCharges" placeholder="Details of Charges" disabled)
+			
+			legend
+				button(type="button" style="margin:10px 10px 5px 10px")#generate
+					span.fa.fa-cog &nbsp;&nbsp;
+					span GENERATE
+
+			legend
+				button(type="button" style="margin:10px 10px 5px 10px" disabled)#submit
+					span.fa.fa-plus &nbsp;&nbsp;
+					span SUBMIT
+				
