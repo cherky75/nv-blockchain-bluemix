@@ -8,4 +8,4 @@ applications:
   instances: 1
   memory: 128M
   services:
-   - Blockchain-o2
+   - nv-blockchain-service
